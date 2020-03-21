@@ -1,7 +1,7 @@
 package day01;
 
 /**
- * 이 클래스는 연산자를 연습하기 위한 클래
+ * 이 클래스는 연산자를 연습하기 위한 클래스 
  * @author leeseulkim
  * @since 2020.03.15
  * @version v.1.0
