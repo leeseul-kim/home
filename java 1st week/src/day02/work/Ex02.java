@@ -1,13 +1,13 @@
-package day02;
+package day02.work;
 
-public class Random_Work03 {
+public class Ex02 {
 	/*
 	 0~255 사이의 랜덤한 숫자를 만들고, 그 숫자를 코드값으로 하는 문자를 만들어서
 	해당 문자가 영문자인지 아닌지 판별하여 출력하세요.
 	단, 삼항연산자를 사용하여 처리하세요.
 	 */
 
-	public Random_Work03() {
+	public Ex02() {
 		String str = check();
 		
 		System.out.println(str);
@@ -30,6 +30,7 @@ public class Random_Work03 {
 	}
 	
 	public static void main(String[] args) {
-		new Random_Work03();
+		new Ex02();
 	}//main
+
 }

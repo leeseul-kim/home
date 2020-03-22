@@ -1,11 +1,9 @@
-package day02;
-/**
- * 이 클래스는 함수를 나누어 사용하는 것에 바탕으로 하여 제작하였습니다. 
- */
+package day02.work;
 
 import java.util.Scanner;
 
-public class Random_Work02 {
+public class Ex01 {
+	
 	/*
 	 3자리로 구성된 숫자 하나를 입력 받은 후, 또는 랜덤하게 만든 후,
 	 백자리 이하를 버린 숫자를 만들어서 출력하세요.
@@ -14,7 +12,7 @@ public class Random_Work02 {
 		 		456 --> 400
 	 */
 	
-	public Random_Work02() {
+	public Ex01() {
 		//inPutNum();
 		getRandom();
 		int rst = getNum(num);
@@ -47,7 +45,8 @@ public class Random_Work02 {
 	//위의 함수들을 한번에 담아서 쓸 수 있다.
 	
 	public static void main(String[] args) {
-		new Random_Work02();
+		new Ex01();
 	}//main
+
 
 }

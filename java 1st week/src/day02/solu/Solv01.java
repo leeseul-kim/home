@@ -1,12 +1,12 @@
-package day02;
-/**
- * 이 클래스는 day01 Hw01에 대한 솔루션입니다.
- * @author leeseulkim
- * @see day01//Hw01
- *
- */
+package day02.solu;
 
-public class Sol01 {
+public class Solv01 {
+	/**
+	 * 이 클래스는 day01 Hw01에 대한 솔루션입니다.
+	 * @author leeseulkim
+	 * @see day01//Hw01
+	 *
+	 */
 	public static void main(String[] args) {
 		
 		double data = 365.2426;
