@@ -1,4 +1,4 @@
-package day04;
+package day04.work;
 
 public class LoopWork01 {
 	
