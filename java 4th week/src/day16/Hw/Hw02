@@ -1,0 +1,68 @@
+숙제2]
+	Vector, ArrayList의 함수 10개정도의 의미와 사용법을 공부하세요.
+	
+*Vector
+	
+	멤버변수(Fields)
+		capacityIncrement / elementCount / elementData 	
+	
+	생성자함수(Constructor)
+	
+	일반함수(Method)
+		1) boolean add(element e)
+			: 해당 벡터 끝에 매개변수로 주어진 element를 더하라.
+			
+		//void add(int index, element e)
+			: 해당 벡터 주어진 index값에 주어진 element를 추가하라.
+		
+		2) Object clone()
+			: 해당 벡터를 복사하여 객체에 반환하라.
+			
+		3) void copyInto(Object[] anArray)
+			: 해당 벡터의 요소를 주어진 객체 배열에 복사하라.
+		
+		4) void ensureCapacity(int minCapacity)
+			: 필요한 경우, 해당 벡터의 용량을 증가시켜 최소용량 갯수에 의해 지정된
+			성분의 갯수를 유지할 수 있도록 하라.
+		
+		5) boolean isEmpty()
+			: 해당 벡터가 성분을 가지고 있지 않은지 확인하라.
+		
+		6) ListIterator<E> listIterator()
+			: Returns a list iterator over the elements in this list(in proper sequence)
+			
+			**ListIterator Interface
+				: Iterator를 상속한 인터페이스.
+				Iterator 인터페이스는 collection을 한 방향으로 탐색하며 객체에 대한 정보를 얻는다.
+				ListIterator는 List에서 제공하는 인터페이스로, List에 포함된 모든 객체를 
+				양방향으로 탐색하면서 객체를 꺼낼 수 있는 방법을 제공한다. 
+		
+		7) boolean retainAll(Collection c)
+			: Retains only the elements in this vector that are contained in the specified Collection.
+			주어진 컬렉션에 포함된 해당 벡터의 요소만 유지하라.
+		
+		8) Object[] toArray()
+			: 순차적으로 해당 벡터의 모든 요소를 배열로 반환하라. 
+		
+		9) List<E> subList(int fromIndex, int toIndex)
+			: fromIndex부터(fromIndex 포함) toIndex까지(toIndex 제외) 사이의 해당하는 리스트의 부분 뷰를 반환하라.
+		
+		10) void trimToSize()
+			: 해당 벡터의 용량을 현재 데이터가 있는 사이즈까지 잘라라.
+			
+
+*ArrayList
+	
+	생성자함수(Constructor) 
+	
+	일반함수(Method)
+		
+		1) boolean contains(Object o)
+			: 주어진 객체를 포함한다면 true를 반환하라.
+		
+		2) protected void removeRange(int fromIndex, int toIndex)
+			: 주어진 인덱스 사이에 있는 리스트 요소를 제거하라.
+			
+		3) boolean addAll(Collection c)
+			: 지정된 컬렉션의 모든 요소를 이 컬렉션의 Iterator에 의해 반환되는 순서로,
+			이 리스트의 끝에 추가하라.

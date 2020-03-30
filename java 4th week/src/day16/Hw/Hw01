@@ -1,0 +1,65 @@
+문제1]
+	Calendar 클래스의
+	
+		1. set()
+			- 반환값은 void, 매개변수를 가지고 있다.
+			- 기본형태 
+				set(int field, int value)
+					: Sets the given calendar field to the given value.
+					//매개변수로 주어진 캘린더 변수를 주어진 값으로 설정하세요.
+			- 기본형태에서 overloading 된 함수들
+				set(int year, int month, int date), ...
+					: Sets the values for the calendar fields YEAR, MONTH, DAY_OF_MONTH
+					//매개변수의 값들을 캘린더 변수 (year, month, day_of_month 형식)의 값으로 설정하세요.
+					
+		2. getTimeNillis()
+			- 반환값은 long, 매개변수는 없다.
+			- Returns this Calendar's time value in milliseconds.
+			//달력의 시간 값을 ms 단위로 반환하세요.
+			
+		3. getActualMaximum()
+			- 반환값은 int, 매개변수를 가지고 있다.
+			- 형태
+				getActualMaximum(int field)
+					: Returns the maximum value that the specified calendar field could have,
+					given the time value of this Calendar.
+					//매개변수로 주어진 값을 갖는 해당 캘린더의 값 중 가장 큰 값을 반환해주세요.
+			
+		4. add()
+			- 속성은 abstract, 반환값은 void, 매개변수를 가지고 있다.
+				//추상함수이다.
+			- 형태 
+				add(int field, int amount)
+					: Adds or subtracts the specified amount of time to the given calendar field,
+					based on the calendar's rules.
+					//캘린더의 규칙을 기반으로 하여, 주어진 캘린더 필드에서 일정 시간의 양만큼을 더하거나 빼주세요.
+					 
+		5. roll()
+			- 속성은 abstract, 반환값은 void, 매개변수를 가지고 있다.
+				//추상함수이다.
+			- 형태
+				roll(int field, boolean up)
+				roll(int field, int amount)
+					: Adds or subtracts (up/down) a single unit of time on the given time field 
+					without changing larger fields.
+					//add() 메소드와 마찬가로, 전달된 캘린더 필드에서 일정 시간만큼을 더하거나 빼주세요,
+					하지만 다른 Calendar 필드에는 영향을 주지 않습니다.
+					즉, 계산 결과가 해당 필드의 최댓값이나 최솟값을 넘어가도 다른 필드에 영향을 주지 않습니다.
+					 
+		6. after()
+			- 반환값은 boolean, 매개변수를 가지고 있다.
+			- 형태
+				after(Object when)
+					: Returns whether this Calendar represents a time after the time represented by
+					the specified Object.
+					//현재 Calendar 인스턴스가 전달된 객체가 나타내는 시간보다 나중인지를 확인하세요.		
+					
+		7. before()
+			- 반환값은 boolean, 매개변수를 가지고 있다.
+			- 형태
+				before(Object when)
+					: Returns whether this Calendar represents a time
+					before the time represented by the specified Object.
+					//현재 캘린더 인스턴스가 전달된 객체가 나타내는 시간보다 앞선지를 확인하세요.
+	
+	를 의미와 사용법을 공부하세요.	
