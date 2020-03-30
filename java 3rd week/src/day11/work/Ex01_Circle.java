@@ -15,7 +15,8 @@ public class Ex01_Circle {
 	double arround, area;	//둘레, 넓이 
 
 	public Ex01_Circle() {
-		
+		//반지름이 입력이 안되었을 때 10으로 셋팅
+		this(10);
 	}//Default Constructor
 	
 	public Ex01_Circle(int radius) {	//객체가 될 때 반지름을 입력받기
