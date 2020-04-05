@@ -1,23 +1,34 @@
 package day17;
 
-public class Ex02_Samgak {
-	
-	//삼각형 변수선언
+public class Ex04_Semo implements Comparable {
+	//Comparable 인터페이스를 구현하는 순간, 비교가능한 클래스가 된다. 
+
+	//변수선언
 	private int width, height;
 	private double area;
 	
-	//기본생성자함수
-	public Ex02_Samgak() {}
+	//생성자함수
+	public Ex04_Semo() {}
 	
-	//생성자함수 오버로딩
-	public Ex02_Samgak(int width, int height) {
+	//Overloading 생성자함수
+	public Ex04_Semo(int width, int height) {
 		this.width = width;
 		this.height = height;
 		setArea();
 	}
-
+	
 	public void setArea() {
 		this.area = width * height * 0.5;
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		Ex04_Semo s = (Ex04_Semo)o;
+		
+		int rst = (int)(this.getArea() - s.getArea());
+		//양수이면 자리바꾸기 >> 오름차순 
+		
+		return rst;
 	}
 
 	public int getWidth() {
@@ -43,6 +54,4 @@ public class Ex02_Samgak {
 	public void setArea(double area) {
 		this.area = area;
 	}
-
-	
 }
