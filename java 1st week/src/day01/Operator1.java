@@ -37,6 +37,11 @@ public class Operator1 {
 		int no6 = 10;
 		no6 %= 3;			//no6 = no6 % 3
 		
+		int a = 10;
+		int b = ++a + a++;
+		
+		System.out.println(b);
+		
 		System.out.println(no1);
 		System.out.println(no2);
 		System.out.println(no3);

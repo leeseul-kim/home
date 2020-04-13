@@ -41,7 +41,8 @@ public class GetNums {
 					}
 				}
 				//4. 4자리 미만의 숫자가 입력되는 예외
-				if(check < 1000) throw new UnderValueException();
+				if(str.length() != 4) throw new UnderValueException();
+				
 			} catch(ArrayIndexOutOfBoundsException | NumberFormatException e) {
 				JOptionPane.showMessageDialog(null, "4자리 이상의 숫자가 입력되었거나,숫자가 아닌 문자가 입력되었습니다.\n다시 입력해주세요.");
 				continue; //예외발생시 다시 반복문 실행 
