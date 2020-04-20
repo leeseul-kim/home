@@ -11,24 +11,29 @@ public class Ex_countingSort {
 //		//원소의 최대값 저장
 //		int maxValue = 4;
 		
-		//동일한 숫자 카운팅해주는 카운팅배열
-		int[] countArr = new int[5];
-		//데이터 채우기 
-		for(int i = 0; i < countArr.length; i++) {
-			int cnt = 0;
+		//정렬이 완료된 배열 선언
+		int[] tmp = new int[nArr.length];
+		
+		//원소의 갯수를 저장할 카운트 배열선언 >> 원소의 최대값이 4이므로 0~4까지의 인덱스가 필요  
+		int[] counts = new int[5];
+		int cnt = 0;
+		for(int i = 0; i < counts.length; i++) {
 			for(int j = 0; j < nArr.length; j++) {
-				if(i == nArr[j]) {
+				if(nArr[j] == i) {
 					cnt++;
 				}
-			}
-			countArr[i] = cnt;
+			}//inner
+			counts[i] = cnt;
 		}
-		//카운팅배열에 담긴 원소들의 합을 누적시킨다. 
-		for(int i = 1; i < countArr.length; i++) {
-			countArr[i] += countArr[i-1];
+		//counts 배열을 누적해서 더해줌
+		System.out.println(Arrays.toString(counts));
+		
+		//nArr 배열을 tmp 배열에 정렬시키기
+		for(int i = 0; i < nArr.length; i++) {
+			int temp = counts[nArr[i]] - 1;
+			tmp[temp] = nArr[i];
+			counts[nArr[i]]--;
 		}
-
-		
-		
+		System.out.println(Arrays.toString(tmp));
 	}//main
 }
